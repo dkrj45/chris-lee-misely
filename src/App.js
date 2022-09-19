@@ -9,7 +9,7 @@ import HomePage from './pages/HomePage/HomePage';
 
 function App() {
 
-  const URL = process.env.REACT_APP_URL || "http://localhost:8080";
+  const URL = process.env.REACT_APP_URL || "https://misely-server.herokuapp.com";
 
   return (
     <div className="App">
