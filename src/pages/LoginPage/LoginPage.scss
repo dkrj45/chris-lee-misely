@@ -1,0 +1,124 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+
+.login-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0 1rem;
+
+    &__back {
+        width: 12px;
+        height: 12px;
+        margin: 3rem 0 1rem;
+        align-self: flex-start;
+    }
+
+    &__title {
+        align-self: flex-start;
+        color: #883F39;
+        font-weight: 400;
+        font-size: 36px;
+        margin: 1rem 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__email {
+        margin: 1rem 0;
+        width: 333px;
+        height: 46px;
+        border: 2px solid #883F39;
+        box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+        padding: 0 1rem;
+    }
+
+    &__button {
+        margin: 1rem;
+        width: 333px;
+        height: 46px;
+        border: 2px solid #883F39;
+        border-radius: 6px;
+        background-color: #f3c1bc;
+        color: #883F39;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__divider {
+        display: flex;
+        align-items: center;
+    }
+
+    &__or {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid rgba(0,0,0,0.2); 
+        line-height: 0.1em;
+        margin: 1.5rem 0 2.5rem; 
+
+        span {
+            background: white; 
+            padding:0 10px; 
+            color: #883F39;
+            font-weight: 500;
+            font-size: 12px;
+        }
+    }
+
+    &__continue1 {
+        margin: 0 0 1rem;
+        width: 327px;
+        height: 40px;
+        background-color: white;
+        background-image: url('../../assets//icons/apple.png');
+        background-repeat: no-repeat;
+        background-position-x: 1rem;
+        background-position-y: 0.5rem;
+        border-radius: 6px;
+        border: 2px solid rgba(0,0,0,0.25);
+        font-weight: 500;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__continue2 {
+        margin: 0 0 1rem;
+        width: 327px;
+        height: 40px;
+        background-color: white;
+        background-image: url('../../assets//icons/google.png');
+        background-repeat: no-repeat;
+        background-position-x: 1rem;
+        background-position-y: 0.5rem;
+        border-radius: 6px;
+        border: 2px solid rgba(0,0,0,0.25);
+        font-weight: 500;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__continue3 {
+        margin: 0 0 1rem;
+        width: 327px;
+        height: 40px;
+        background-color: white;
+        background-image: url('../../assets//icons/facebook.png');
+        background-repeat: no-repeat;
+        background-position-x: 1rem;
+        background-position-y: 0.5rem;
+        border-radius: 6px;
+        border: 2px solid rgba(0,0,0,0.25);
+        font-weight: 500;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}

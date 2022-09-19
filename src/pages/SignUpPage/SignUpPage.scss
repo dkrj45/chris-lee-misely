@@ -1,0 +1,78 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+
+.sign-up-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0 1rem;
+
+    &__back {
+        width: 12px;
+        height: 12px;
+        margin: 3rem 0 1rem;
+        align-self: flex-start;
+    }
+
+    &__title {
+        align-self: flex-start;
+        color: #883F39;
+        font-weight: 400;
+        font-size: 36px;
+        margin: 1rem 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label {
+        margin: 1rem 1rem 0;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 0;
+    }
+
+    &__label--featured {
+        @extend .sign-up-page__label;
+        margin-top: 2rem;
+    }
+
+    &__input {
+        margin: 1rem;
+        width: 333px;
+        height: 46px;
+        border: 2px solid #883F39;
+        box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+        padding: 0 1rem;
+    }
+
+    &__disclaimer {
+        margin: 1rem;
+        width: 80%;
+        color: black;
+        position: relative;
+
+        & span {
+            color: #883F39;
+        }
+    }
+
+    &__button {
+        margin: 1rem;
+        width: 333px;
+        height: 46px;
+        border: 2px solid #883F39;
+        border-radius: 6px;
+        background-color: #f3c1bc;
+        color: #883F39;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}

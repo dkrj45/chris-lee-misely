@@ -1,0 +1,25 @@
+@use './styles/partials/fonts' as *;
+@use './styles/partials/mixins' as *;
+@use "./styles/partials/variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  position: relative;
+  top: 50vh;
+  transform: translate(-187.5px,-50%);
+  left: 50%;
+}
+
+.App {
+  padding-top: 1rem;
+  width: 375px;
+  height: 812px;
+  overflow: auto;
+  background-color: white;
+}
