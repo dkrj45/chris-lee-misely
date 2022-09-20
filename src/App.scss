@@ -10,13 +10,14 @@
 
 body {
   font-family: "Roboto";
+  background-color: #00000050;
 
-  @include tablet {
-    position: relative;
-    top: 50vh;
-    transform: translate(-187.5px, -50%);
-    left: 50%;
-  }
+
+  position: relative;
+  top: 50vh;
+  transform: translate(-187.5px, -50%);
+  left: 50%;
+
 }
 
 
