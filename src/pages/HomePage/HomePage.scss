@@ -40,6 +40,12 @@
             font-size: 10px;
             font-weight: 900;
         }
+
+        &--featured{
+            @extend .home-page__service;
+            background-color: #00000030;
+            border-radius: 5px;
+        }
     }
 
     &__section-title {

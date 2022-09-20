@@ -6,6 +6,10 @@ import WelcomePage from './pages/WelcomePage/WelcomePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import HomePage from './pages/HomePage/HomePage';
+import ProvidersPage from './pages/ProvidersPage/ProvidersPage';
+import BookingsPage from './pages/BookingsPage/BookingsPage';
+import MessagesPage from './pages/MessagesPage/MessagesPage';
+import ProviderPage from './pages/ProviderPage/ProviderPage';
 
 function App() {
 
@@ -21,6 +25,10 @@ function App() {
             <Route path='/login' element={<LoginPage />}></Route>
             <Route path='/signup' element={<SignUpPage />}></Route>
             <Route path='/home' element={<HomePage URL={URL} />}></Route>
+            <Route path='/providers' element={<ProvidersPage URL={URL} />}></Route>
+            <Route path='/providers/:id' element={<ProviderPage URL={URL} />}></Route>
+            <Route path='/bookings' element={<BookingsPage URL={URL} />}></Route>
+            <Route path='/messages' element={<MessagesPage URL={URL} />}></Route>
             <Route path='*' element={<NotFoundPage />}></Route>
           </Routes>
         </BrowserRouter>
