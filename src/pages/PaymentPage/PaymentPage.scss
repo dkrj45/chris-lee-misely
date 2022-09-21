@@ -1,0 +1,144 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+
+.payment-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    &-container {
+        padding: 0 1rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid #00000030;
+        padding-bottom: 1rem;
+
+        img {
+            position: absolute;
+            left: 1rem;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 17px;
+        justify-self: center;
+        margin: 0;
+    }
+
+    &__calculation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    &__texts {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    &__texts--featured {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: #883f39;
+    }
+
+    &__texts--total {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    &__card-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #3a3c3f;
+        margin: 1rem 0 0.5rem;
+    }
+
+    &__card-number {
+        background-color: #eaecee;
+        border-radius: 16px;
+        width: 327px;
+        height: 56px;
+        border: none;
+        padding: 1rem;
+        background-image: url('../../assets/icons/master-card.png'), url('../../assets/icons/credit-card.png');
+        background-repeat: no-repeat, no-repeat;
+        background-position-x: 80%, 95%;
+        background-position-y: center, center;
+        border-bottom: 2px solid #883f39;
+    }
+
+    &__cardholder {
+        background-color: #eaecee;
+        border-radius: 16px;
+        width: 327px;
+        height: 56px;
+        border: none;
+        padding: 1rem;
+        border-bottom: 2px solid #883f39;
+    }
+
+    &__card-others {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card-other {
+        background-color: #eaecee;
+        border-radius: 16px;
+        width: 152px;
+        height: 56px;
+        border: none;
+        padding: 1rem;
+        border-bottom: 2px solid #883f39;
+    }
+
+    &__message {
+        position: relative;
+        font-size: 11px;
+        color: #929da9;
+        margin-bottom: 1rem;
+    }
+
+    &__footer {
+        padding: 1rem;
+        border-top: 1px solid #00000030;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-button {
+            border-radius: 6px;
+            border: 2px solid #883f39;
+            color: #883f39;
+            background-color: #f3c1bc;
+            width: 253px;
+            height: 43px;
+        }
+    }
+}

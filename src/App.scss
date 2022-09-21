@@ -11,8 +11,6 @@
 body {
   font-family: "Roboto";
   background-color: #00000050;
-
-
   position: relative;
   top: 50vh;
   transform: translate(-187.5px, -50%);
@@ -25,6 +23,7 @@ body {
 .App {
   width: 375px;
   height: 812px;
+  position: relative;
   padding: 3rem 0;
   overflow: auto;
   background-color: white;

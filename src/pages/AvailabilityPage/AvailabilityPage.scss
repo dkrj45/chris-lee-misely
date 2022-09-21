@@ -1,0 +1,79 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+
+.availability-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid #00000030;
+        padding-bottom: 1rem;
+
+        img {
+            position: absolute;
+            left: 1rem;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 17px;
+        justify-self: center;
+        margin: 0;
+    }
+
+    &__date-range-picker {
+        margin-top: 1rem;
+    }
+
+    &__footer {
+        width: 87%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem 0 0;
+
+        &-waiting-button {
+            width: 268px;
+            height: 40px;
+            background-color: #dbdbdb;
+            border-radius: 5px;
+            color: #707070;
+            border: none;
+            margin: 1rem 0;
+            justify-self: center;
+        }
+
+        &-not-button {
+            h2 {
+                font-size: 16px;
+                color: #883f39;
+                margin: 0;
+            }
+            p {
+                position: relative;
+                font-size: 9px;
+                color: black;
+                font-weight: 700;
+            }
+        }
+
+        &-button {
+            width: 137px;
+            height: 37px;
+            color: #883f39;
+            background-color: #f3c1bc;
+            border-radius: 6px;
+            border: 2px solid #883f39;
+        }
+    }
+}

@@ -9,7 +9,7 @@ import doula from '../../assets/icons/doulas.png'
 import housework from '../../assets/icons/housework.png'
 import massage from '../../assets/icons/massage.png'
 
-function ProviderPage({ URL, condition }) {
+function ProviderPageWaiting({ URL }) {
 
     let { id } = useParams();
 
@@ -21,8 +21,8 @@ function ProviderPage({ URL, condition }) {
         axios.get(`${URL}/providers/64450fa1-a338-414e-a71e-6bc8cb984a2e`)
             .then(res => {
                 setProvider(res.data)
-            })
-    },[id])
+            }, [id])
+    })
 
     if (!id) {
         return <NotFoundPage />
@@ -126,16 +126,10 @@ function ProviderPage({ URL, condition }) {
                     )
                 })}
             </div>
-            <div className='provider-page__footer'>
-                    <div className='provider-page__footer-not-button'>
-                        <h2>From $35 / hour</h2>
-                        <p>Minimum 4 hours per day</p>
-                    </div>
-                    <button onClick={() => navigate('/availability')} className='provider-page__footer-button'>Check Availability</button>
-                </div>
-            </div>
+            <button className='provider-page__footer-waiting-button'>Waiting for Confirmation</button>
+        </div>
     );
 
 }
 
-export default ProviderPage;
+export default ProviderPageWaiting;

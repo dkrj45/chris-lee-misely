@@ -34,7 +34,10 @@ const SignUpPage = () => {
                     <p className='sign-up-page__disclaimer'>By continuing, you agree to Misely’s <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
                     <button onClick={()=>navigate('/home')} className='sign-up-page__button'>Sign Up</button>
             </form>
-            
+            <h2 className='sign-up-page__or'><span>OR</span></h2>
+            <button onClick={()=>navigate('/home')} className='sign-up-page__continue1'>Continue with Apple</button>
+            <button onClick={()=>navigate('/home')} className='sign-up-page__continue2'>Continue with Google</button>
+            <button onClick={()=>navigate('/home')} className='sign-up-page__continue3'>Continue with Facebook</button>
         </div>
     )
 
