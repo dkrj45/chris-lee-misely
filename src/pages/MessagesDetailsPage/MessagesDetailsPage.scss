@@ -2,13 +2,12 @@
 @use '../../styles/partials/mixins' as *;
 @use "../../styles/partials/variables" as *;
 
-.messages-page {
+.messages-details-page {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
 
     &__header {
         display: flex;
@@ -17,6 +16,11 @@
         width: 100%;
         border-bottom: 1px solid #00000030;
         padding-bottom: 1rem;
+
+        img {
+            position: absolute;
+            left: 1rem;
+        }
     }
 
     &__title {
@@ -26,51 +30,49 @@
         margin: 0;
     }
 
-    &__container {
+    &__conversation {
+        padding: 2rem 1rem 0;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
-        border-bottom: 1px solid #00000030;
-        padding: 1.5rem 1rem;
-    }
 
-    &__right {
-        width: 76%;
+        div {
+            width: 299px;
+            background-color: #00000010;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem;
 
-        h2 {
-            margin: 0 0 0.5rem;
-            font-size: 13px;
+            h3 {
+                position: relative;
+                margin: 0;
+                font-weight: 400;
+                font-size: 13px;
+            }
         }
 
-        h3 {
-            margin: 0;
-            font-size: 13px;
-            font-weight: 400;
-        }
     }
 
-    &__footer-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        border-top: 1px solid #00000030;
-        margin-top: 1rem;
-        position: absolute;
-        bottom: 3rem;
-    }
-
-    &__footer-tab {
-        width: 20%;
-        height: 71px;
+    &__footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #f1f3f7;
+        width: 100%;
+        position: absolute;
+        bottom: 3rem;
 
-        &--special {
-            @extend .messages-page__footer-tab;
-            padding-top: 10px;
+        input {
+            background-color: white;
+            border-radius: 10px;
+            color: #6B779A;
+            padding: 0.3rem 1rem;
+            border: none;
+            margin: 1rem;
+            width: 264px;
+            height: 33px;
         }
     }
+
 }

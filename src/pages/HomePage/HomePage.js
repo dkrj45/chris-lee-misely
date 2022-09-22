@@ -45,94 +45,95 @@ const HomePage = ({ URL }) => {
     }
 
     return (
-        <div className='home-page'>
-            <div>
-                <img className='home-page__profile-picture' src={profilePicture} alt='User Profile Picture' />
-                <img onClick={() => navigate('/welcome')} src={logo} alt='Misely Logo' />
-            </div>
-            <p className='home-page__address'>25 Navarre Rd, Toronto, ON</p>
-            <div className='home-page__services'>
-                <div className='home-page__service--featured'>
-                    <img src={housework} />
-                    <h2 className='home-page__service-title'>Housework</h2>
+        <>
+            <div className='home-page'>
+                <div>
+                    <img className='home-page__profile-picture' src={profilePicture} alt='User Profile Picture' />
+                    <img onClick={() => navigate('/welcome')} src={logo} alt='Misely Logo' />
                 </div>
-                <div onClick={inDevelopment} className='home-page__service'>
-                    <img src={doulas} />
-                    <h2 className='home-page__service-title'>Doulas</h2>
+                <p className='home-page__address'>25 Navarre Rd, Toronto, ON</p>
+                <div className='home-page__services'>
+                    <div className='home-page__service--featured'>
+                        <img src={housework} />
+                        <h2 className='home-page__service-title'>Housework</h2>
+                    </div>
+                    <div onClick={inDevelopment} className='home-page__service'>
+                        <img src={doulas} />
+                        <h2 className='home-page__service-title'>Doulas</h2>
+                    </div>
+                    <div onClick={inDevelopment} className='home-page__service'>
+                        <img src={massage} />
+                        <h2 className='home-page__service-title'>Massage</h2>
+                    </div>
+                    <div onClick={inDevelopment} className='home-page__service'>
+                        <img src={lactation} />
+                        <h2 className='home-page__service-title'>Lactation</h2>
+                    </div>
+                    <div onClick={inDevelopment} className='home-page__service'>
+                        <img src={mentalHealth} />
+                        <h2 className='home-page__service-title'>Mental<br />Health</h2>
+                    </div>
                 </div>
-                <div onClick={inDevelopment} className='home-page__service'>
-                    <img src={massage} />
-                    <h2 className='home-page__service-title'>Massage</h2>
-                </div>
-                <div onClick={inDevelopment} className='home-page__service'>
-                    <img src={lactation} />
-                    <h2 className='home-page__service-title'>Lactation</h2>
-                </div>
-                <div onClick={inDevelopment} className='home-page__service'>
-                    <img src={mentalHealth} />
-                    <h2 className='home-page__service-title'>Mental<br />Health</h2>
-                </div>
-            </div>
-            <h2 className='home-page__section-title'>Top Providers Near You</h2>
-            <div className='home-page__providers'>
-                {providersArray ?
-                    providersArray.filter(provider => { return provider.homeImage }).map((provider) => {
-                        return (
-                            <div key={provider.id} className='home-page__provider-wrapper'>
-                                <img onClick={() => navigate(`/providers/${provider.id}`)} className='home-page__provider-image' src={`${URL}/${provider.homeImage}`} alt='provider photo' />
-                                <div className='home-page__provider-information'>
-                                    <h2>{provider.name}</h2>
-                                    <p>{provider.distance}</p>
-                                </div>
-                                <div className='home-page__provider-rating'>
-                                    <img src={star} />
-                                    <h2>{provider.rating} ({provider.ratingPool})</h2>
-                                </div>
-                                <div className='home-page__provider-services'>
-                                    {provider.services.map(service => {
-                                        return (
-                                            <div className='home-page__provider-service'>
-                                                <h2>{service}</h2>
-                                            </div>
-                                        )
-                                    })}
+                <h2 className='home-page__section-title'>Top Providers Near You</h2>
+                <div className='home-page__providers'>
+                    {providersArray ?
+                        providersArray.filter(provider => { return provider.homeImage }).map((provider) => {
+                            return (
+                                <div key={provider.id} className='home-page__provider-wrapper'>
+                                    <img onClick={() => navigate(`/providers/${provider.id}`)} className='home-page__provider-image' src={`${URL}/${provider.homeImage}`} alt='provider photo' />
+                                    <div className='home-page__provider-information'>
+                                        <h2>{provider.name}</h2>
+                                        <p>{provider.distance}</p>
+                                    </div>
+                                    <div className='home-page__provider-rating'>
+                                        <img src={star} />
+                                        <h2>{provider.rating} ({provider.ratingPool})</h2>
+                                    </div>
+                                    <div className='home-page__provider-services'>
+                                        {provider.services.map(service => {
+                                            return (
+                                                <div className='home-page__provider-service'>
+                                                    <h2>{service}</h2>
+                                                </div>
+                                            )
+                                        })}
 
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })
-                    : <h2>Loading...</h2>}
-            </div>
-            <h2 className='home-page__section-title'>Popular Groups</h2>
-            <div className='home-page__groups'>
-                {groupsArray ?
-                    groupsArray.map((group) => {
-                        return (
-                            <div onClick={inDevelopment} key={group.id} className='home-page__group'>
-                                <img src={`${URL}/${group.image}`} />
-                                <h2>{group.name}</h2>
-                            </div>
-                        )
-                    })
-                    : <h2>Loading...</h2>}
-            </div>
-            <h2 className='home-page__section-title'>Join Classes</h2>
-            <div className='home-page__classes'>
-                {classesArray ? 
-                    classesArray.map((classes) => {
-                        return (
-                            <div onClick={inDevelopment} key={classes.id} className='home-page__class'>
-                                <img src={`${URL}/${classes.image}`} />
-                                <h2>{classes.name}</h2>
-                            </div>
-                        )
-                })
-                : <h2>Loading...</h2>}
-            </div>
-            <div className='home-page__information'>
-                <h2 className='home-page__section-title'>Useful Information</h2>
-                <h2 className='home-page__information-view-more'>View more</h2>
-            </div>
+                            )
+                        })
+                        : <h2>Loading...</h2>}
+                </div>
+                <h2 className='home-page__section-title'>Popular Groups</h2>
+                <div className='home-page__groups'>
+                    {groupsArray ?
+                        groupsArray.map((group) => {
+                            return (
+                                <div onClick={inDevelopment} key={group.id} className='home-page__group'>
+                                    <img src={`${URL}/${group.image}`} />
+                                    <h2>{group.name}</h2>
+                                </div>
+                            )
+                        })
+                        : <h2>Loading...</h2>}
+                </div>
+                <h2 className='home-page__section-title'>Join Classes</h2>
+                <div className='home-page__classes'>
+                    {classesArray ?
+                        classesArray.map((classes) => {
+                            return (
+                                <div onClick={inDevelopment} key={classes.id} className='home-page__class'>
+                                    <img src={`${URL}/${classes.image}`} />
+                                    <h2>{classes.name}</h2>
+                                </div>
+                            )
+                        })
+                        : <h2>Loading...</h2>}
+                </div>
+                <div className='home-page__information'>
+                    <h2 className='home-page__section-title'>Useful Information</h2>
+                    <h2 className='home-page__information-view-more'>View more</h2>
+                </div>
                 {informationsArray ? informationsArray.map(information => {
                     return (
                         <div onClick={inDevelopment} className='home-page__information-container'>
@@ -147,6 +148,7 @@ const HomePage = ({ URL }) => {
                     )
                 })
                     : <h2>Loading...</h2>}
+            </div>
             <div className='home-page__footer-navigation'>
                 <div className='home-page__footer-tab'><img src={homeTab} /></div>
                 <div onClick={() => navigate('/providers')} className='home-page__footer-tab'><img src={providersTab} /></div>
@@ -154,7 +156,7 @@ const HomePage = ({ URL }) => {
                 <div onClick={() => navigate('/messages')} className='home-page__footer-tab--special'><img src={messagesTab} /></div>
                 <div onClick={inDevelopment} className='home-page__footer-tab'><img src={groupsTab} /></div>
             </div>
-        </div>
+        </>
     )
 
 }

@@ -16,6 +16,7 @@ import AvailabilityPage from './pages/AvailabilityPage/AvailabilityPage';
 import RequestPage from './pages/RequestPage/RequestPage';
 import PaymentPage from './pages/PaymentPage/PaymentPage';
 import ConfirmationPage from './pages/ConfirmationPage/ConfirmationPage';
+import MessagesDetailsPage from './pages/MessagesDetailsPage/MessagesDetailsPage';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
             <Route path='/bookings' element={<BookingsPage URL={URL} />}></Route>
             <Route path='/bookings/details' element={<BookingsDetailsPage URL={URL} />}></Route>
             <Route path='/messages' element={<MessagesPage URL={URL} />}></Route>
+            <Route path='/messages/details' element={<MessagesDetailsPage />}></Route>
             <Route path='/availability' element={<AvailabilityPage />}></Route>
             <Route path='/request' element={<RequestPage />}></Route>
             <Route path='/payment' element={<PaymentPage />}></Route>
