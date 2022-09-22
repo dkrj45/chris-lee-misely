@@ -23,30 +23,30 @@ function MessagesPage() {
             <div className='messages-page__header'>
                 <h1 className='messages-page__title'>Messages</h1>
             </div>
-            <div className='messages-page__container'>
+            <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={laura} />
-                <div onClick={()=>navigate('/messages/details')} className='messages-page__right'>
+                <div className='messages-page__right'>
                     <h2>Laura Smith, RMT</h2>
                     <h3>That's perfect. I will see you at 3 then.</h3>
                 </div>
             </div>
-            <div className='messages-page__container'>
+            <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={liz} />
-                <div onClick={()=>navigate('/messages/details')} className='messages-page__right'>
+                <div className='messages-page__right'>
                     <h2>Laura Smith, RMT</h2>
                     <h3>That's perfect. I will see you at 3 then.</h3>
                 </div>
             </div>
-            <div className='messages-page__container'>
+            <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={beth} />
-                <div onClick={()=>navigate('/messages/details')} className='messages-page__right'>
+                <div className='messages-page__right'>
                     <h2>Laura Smith, RMT</h2>
                     <h3>That's perfect. I will see you at 3 then.</h3>
                 </div>
             </div>
-            <div className='messages-page__container'>
+            <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={rev} />
-                <div onClick={()=>navigate('/messages/details')} className='messages-page__right'>
+                <div className='messages-page__right'>
                     <h2>Laura Smith, RMT</h2>
                     <h3>That's perfect. I will see you at 3 then.</h3>
                 </div>
