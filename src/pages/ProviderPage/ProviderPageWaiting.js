@@ -44,7 +44,7 @@ function ProviderPageWaiting({ URL }) {
     return (
         <div className='provider-page'>
             <div className='provider-page__header'>
-                <img onClick={() => navigate('/providers')} src={back} />
+                <img onClick={() => navigate('/bookings/details')} src={back} />
                 <h1 className='provider-page__title'>Profile</h1>
             </div>
             <img className='provider-page__image' src={`${URL}/${provider.image}`} />

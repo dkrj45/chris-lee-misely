@@ -1,3 +1,182 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use "../../styles/partials/variables" as *;
+
+.bookings-details-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid #00000030;
+        padding-bottom: 1rem;
+
+        img {
+            position: absolute;
+            left: 1rem;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 17px;
+        justify-self: center;
+        margin: 0;
+    }
+
+    &__top {
+        padding: 2rem;
+        border-bottom: 1px solid #00000030;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        &-right {
+            width: 50%;
+            margin-left: 1rem;
+        }
+    }
+
+    &__name {
+        font-size: 14px;
+        color: #00000090;
+        margin: 0 0 0.5rem;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &-rate {
+            font-size: 11px;
+            font-weight: 700;
+            margin:0 0 0.5rem 0.5rem;
+
+            span {
+                font-size: 11px;
+                font-weight: 700;
+                color: #00000080;
+            }
+        }
+    }
+
+    &__service {
+        border: 2px solid #00000040;
+        border-radius: 6px;
+        background-color: #00000030;
+        margin-right: 0.5rem;
+        color: #00000080;
+        font-weight: 700;
+        font-size: 8px;
+        padding: 0.3rem 0.5rem;
+    }
+
+    &__view-profile {
+        background-color: #F3C1BC;
+        color: #883F39;
+        border: 1px solid #883F39;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
+    }
+
+    &__dates {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        align-items: center;
+        border-bottom: 1px solid #00000030;
+    }
+
+    &__start-date {
+        width: 50%;
+        border-right: 1px solid #00000030;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+
+        h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__end-date {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+
+        h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__status {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #00000030;
+
+        h2 {
+            font-size: 18px;
+            padding: 1rem;
+            align-self: flex-start;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        h2 {
+            font-size: 18px;
+            margin: 1rem 0 2rem;
+        }
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        h2{
+            margin: 0 0 1rem;
+            font-size: 14px;
+        }
+
+        h3 {
+            margin: 0 0 1.5rem;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

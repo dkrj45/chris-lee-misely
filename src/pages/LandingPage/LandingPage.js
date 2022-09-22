@@ -46,6 +46,8 @@ function LandingPage({ url }) {
         setRadioButton4(true);
     }
 
+    console.log(window.pageXOffset)
+
     return (
         <div className='landing-page'>
             <img onClick={() => navigate('/welcome')} className='landing-page__logo' src={logo} alt='Misely Logo' />
