@@ -15,7 +15,7 @@
         justify-content: center;
         width: 100%;
         border-bottom: 1px solid #00000030;
-        padding-bottom: 1rem;
+        padding: 1rem 0;
 
         img {
             position: absolute;
@@ -61,7 +61,7 @@
         background-color: #f1f3f7;
         width: 100%;
         position: absolute;
-        bottom: 3rem;
+        bottom: 0;
 
         input {
             background-color: white;

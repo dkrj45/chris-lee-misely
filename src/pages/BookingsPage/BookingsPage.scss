@@ -22,7 +22,7 @@
         justify-content: center;
         width: 100%;
         border-bottom: 1px solid #00000030;
-        padding-bottom: 1rem;
+        padding: 1rem 0;
 
         img {
             position: absolute;
@@ -182,7 +182,7 @@
         border-top: 1px solid #00000030;
         margin-top: 1rem;
         position: absolute;
-        bottom: 3rem;
+        bottom: 0;
     }
 
     &__footer-tab {
