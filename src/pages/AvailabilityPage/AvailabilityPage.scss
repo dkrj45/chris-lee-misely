@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
+    padding-top: 1rem;
 
     &__header {
         display: flex;
@@ -40,7 +40,9 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1rem 0 0;;
+        padding: 1rem 0;
+        position: absolute;
+        bottom: 0;
 
         &-waiting-button {
             width: 268px;

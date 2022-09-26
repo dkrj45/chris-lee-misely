@@ -19,7 +19,7 @@ function BookingsDetailsPage({ URL }) {
     }, [])
 
     return (
-        <div>
+        <div className='bookings-details-page'>
             <div className='bookings-details-page__header'>
                 <img onClick={() => navigate('/bookings')} src={back} />
                 <h1 className='bookings-details-page__title'>Booking details</h1>

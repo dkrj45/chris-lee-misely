@@ -7,7 +7,7 @@ function ConfirmationPage() {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className='confirmation-page'>
             <div className='confirmation-page__header'>
                 <h1 className='confirmation-page__title'>Confirmation</h1>
             </div>

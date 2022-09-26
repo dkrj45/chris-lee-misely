@@ -16,6 +16,14 @@
     &__frame {
         width: 375px;
         overflow: auto;
+
+        &::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #66666666;
+        }
     }
 
     &__images {
@@ -26,19 +34,22 @@
 
     &__images--1 {
         @extend .landing-page__images;
-        transform: translate(0,0);
+        transform: translate(0, 0);
     }
+
     &__images--2 {
         @extend .landing-page__images;
-        transform: translate(-100%,0);
+        transform: translate(-100%, 0);
     }
+
     &__images--3 {
         @extend .landing-page__images;
-        transform: translate(-200%,0);
+        transform: translate(-200%, 0);
     }
+
     &__images--4 {
         @extend .landing-page__images;
-        transform: translate(-300%,0);
+        transform: translate(-300%, 0);
     }
 
     &__radio-buttons {
@@ -48,7 +59,7 @@
         margin: 1rem 0 0;
     }
 
-    
+
 
     &__buttons {
         margin: 160px 0 80px;

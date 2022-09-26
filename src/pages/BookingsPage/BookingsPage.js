@@ -39,7 +39,7 @@ function BookingsPage({ URL }) {
     }, [])
 
     return (
-        <div>
+        <div className='bookings-page'>
             <div className='bookings-page__header'>
                 <h1 className='bookings-page__title'>Bookings</h1>
             </div>

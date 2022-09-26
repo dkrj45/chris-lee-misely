@@ -19,7 +19,7 @@ function MessagesPage() {
     }
 
     return (
-        <div>
+        <div className='messages-page'>
             <div className='messages-page__header'>
                 <h1 className='messages-page__title'>Messages</h1>
             </div>

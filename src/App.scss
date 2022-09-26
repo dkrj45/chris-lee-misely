@@ -27,4 +27,8 @@ body {
   border-radius: 1rem;
   overflow: auto;
   background-color: white;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

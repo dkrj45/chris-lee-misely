@@ -7,7 +7,7 @@ function PaymentPage() {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className='payment-page'>
             <div className='payment-page__header'>
                 <img onClick={() => navigate('/availability')} src={back} />
                 <h1 className='payment-page__title'>Price Details</h1>
