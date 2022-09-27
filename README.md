@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Misely is a mobile app that connects new mothers with interviewed, background-checked and top-rated professionals to make postpartum period enjoyable.
 
-## Available Scripts
+To checkout the current features of this app, please jump to the 'Functionality/Directions' section. 
 
-In the project directory, you can run:
+**Please note that this project is for proof-of-concept and the scope of the project is heavily focused on the front-end side, although dynamic data is retried from an express server. The app only focuses on the 'housework' service. Authentication, actual booking process (back-end (i.e. payment service)) and chat functions are not implemented.**
 
-### `npm start`
+This project was made using the following tech stack:
+Front-End:
+•	React.js
+•	React-router-dom
+•	Axios
+•	react-date-range
+Back-end:
+•	Node.js
+•	Express.js
+•	cors
+•	dotenv
+•	nodemon
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In order to successfully run this application, both of the following repositories are required for front-end and back-end, respectively:
+1) dkrj45/chris-lee-misely at https://github.com/dkrj45/chris-lee-misely.git
+2) dkrj45/chris-lee-misely-server at https://github.com/dkrj45/chris-lee-misely-server.git
 
-### `npm test`
+## Setting Up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Please follow the instructions below to properly set up the repositories.
 
-### `npm run build`
+### Installing Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The aforementioned repositories do not include node_modules folder that contains all the dependencies.
+Please open each of the repositories and enter the following command line to install all dependencies: 'npm i'
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Creating .env files
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Both repositories require .env files in order to properly operate.
 
-### `npm run eject`
+For the front-end repository, create a .env file with the following code: 'REACT_APP_URL = "http://localhost:8080'
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For the back-end repository, create another .env file with the following code: 'PORT = "8080"'
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Launching the application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application is ready to be launched now.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Go to the server repository and enter the following command line to launch the server: 'node index'
+Then, go to the front-end repo and enter the following command line: 'npm start'
 
-## Learn More
+The application should open in a browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Functionality/Directions
 
-### Code Splitting
+When the application loads, you are first greeted by the 'welcome page'. You may start by clicking anywhere on the page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Once clicked, you are landed on the 'landing page', where you may swipe through different images to learn more about Misely, or travel straight to the 'sign up page' or 'log in page'.
 
-### Analyzing the Bundle Size
+On the 'sign up page', you can make an account by filling in the crendentials or use your own Apple, Google or Facebook account to log in. You can also choose to go back to the 'landing page'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Similarly, on the 'login page', you can use the account that you made on the 'sign up page' or use other aforementioned services to log in. You can also choose to go back to the 'landing page'.
 
-### Making a Progressive Web App
+Once logged in, the 'home page' will render. This page will have access to various services. Feel free to browse the page. Notice that 'Housework' section on the header is already selected, since this is our scope for this project.
+You may click on 'Laura Smith' under the providers section to checkout her profile or visit other pages through the navigation footer on the bottom. Please note that 'Groups' tab is not functional at the moment. Similarly, 'Groups', 'Classes' and 'Useful Information' sections on this page are not accessible, due to scope.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Clicking on the 'Providers tab' renders a new page, where you can browser through different providers. Please note that only 'Laura Smith' is functional at the moment.
 
-### Advanced Configuration
+Clicking on the 'Bookings tab' renders a new page, where you can check the services that the user has booked previously, or ones that are coming up. Clicking on 'Laura Smith' will render the details of the booking that the user made with her.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Clicking on the 'messages' tab will lead you to the 'messages page' where you can view different conversations the user has had with providers. Try clicking on 'Laura Smith' to chat with her.
 
-### Deployment
+To start booking, try clicking on 'Laura Smith' from the 'home page' or the 'providers page'. On the profile page, you can checkout various informaiton about her such as hourly rate, experience and ratings. Click on the 'check availability' button on the very bottom to start the appointment and move to the 'availability page'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+On the availability page, you may select the date range of the service that you wish to book. Once selected click 'select dates' button to go to the 'request page'.
 
-### `npm run build` fails to minify
+On the request page, you can select detailed options for the service and also leave messages to the provider. Once finished, click the button on the very bottom to go to 'payment page'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The 'payment page' is where you can check the price details of the appointment and pay for the service. When you click on 'request to book' button on the very bottom, you will be moved to the confirmation page, where you can travel back to 'home page' or view the summerized details of the booking that you just made.
+
+
+

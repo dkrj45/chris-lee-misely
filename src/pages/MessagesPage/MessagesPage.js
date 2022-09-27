@@ -33,22 +33,22 @@ function MessagesPage() {
             <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={liz} />
                 <div className='messages-page__right'>
-                    <h2>Laura Smith, RMT</h2>
-                    <h3>That's perfect. I will see you at 3 then.</h3>
+                    <h2>Liz Williams</h2>
+                    <h3>I know... It's stressful time</h3>
                 </div>
             </div>
             <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={beth} />
                 <div className='messages-page__right'>
-                    <h2>Laura Smith, RMT</h2>
-                    <h3>That's perfect. I will see you at 3 then.</h3>
+                    <h2>Beth Stewart</h2>
+                    <h3>I'm looking for tips around formulas</h3>
                 </div>
             </div>
             <div onClick={()=>navigate('/messages/details')} className='messages-page__container'>
                 <img src={rev} />
                 <div className='messages-page__right'>
-                    <h2>Laura Smith, RMT</h2>
-                    <h3>That's perfect. I will see you at 3 then.</h3>
+                    <h2>Rev Shawn</h2>
+                    <h3>Wanted to ask if you are available this Friday for a prenatal class with me</h3>
                 </div>
             </div>
             <div className='bookings-page__footer-navigation'>
