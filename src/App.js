@@ -20,7 +20,7 @@ import MessagesDetailsPage from './pages/MessagesDetailsPage/MessagesDetailsPage
 
 function App() {
 
-  const URL = process.env.REACT_APP_URL || "https://misely-server.herokuapp.com";
+  const URL = process.env.REACT_APP_URL || "http://miselyserver-env.eba-bktvxnzp.us-east-1.elasticbeanstalk.com";
 
   return (
     <div className="App">
